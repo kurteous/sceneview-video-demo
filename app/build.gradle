@@ -30,19 +30,22 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.core:core-ktx:1.1.0'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    testImplementation 'junit:junit:4.13.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
-    implementation "com.google.ar.sceneform.ux:sceneform-ux:1.13.0"
-    implementation 'com.google.ar.sceneform:assets:1.13.0'
+    //Sceneform Core
+
+    implementation "pro.streem.sceneform:core:1.18.0"
+    implementation 'pro.streem.sceneform.ux:sceneform-ux:1.18.0'
+
+//    api project(":sceneformux")
+
+//    implementation("com.gorisse.thomas.sceneform:sceneform:1.18.3")
+
+//    implementation "com.google.ar.sceneform.ux:sceneform-ux:1.15.0"
+//    implementation 'com.google.ar.sceneform:assets:1.15.0'
 }
-apply plugin: 'com.google.ar.sceneform.plugin'
-
-sceneform.asset('sampledata/model.fbx',
-        'default',
-        'sampledata/model.sfa',
-        'src/main/assets/model')

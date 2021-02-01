@@ -23,13 +23,4 @@ class MainActivity : AppCompatActivity() {
         )
 
     }
-
-    fun onRemoteModelClick(view: View) {
-        startActivity(
-            Intent(
-                this,
-                SceneViewActivity::class.java
-            ).putExtra(SceneViewActivity.Statics.EXTRA_MODEL_TYPE, "remote")
-        )
-    }
 }
