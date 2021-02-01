@@ -151,7 +151,7 @@ class SceneViewActivity : AppCompatActivity() {
                     thenAccept { renderable ->
                         videoRenderable = renderable
                         renderable?.material?.apply {
-                            setExternalTexture("cameraexture", texture)
+                            setExternalTexture("cameraTexture", texture)
                             setFloat4("keyColor", CHROMA_KEY_COLOR)
                             setBoolean("disableChromaKey", false)
                         }
